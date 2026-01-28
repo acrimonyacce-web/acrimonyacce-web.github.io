@@ -24,10 +24,76 @@
       font-size: 1.2em;
       color: #c3c3c3
     }
+
+    /* Hamburger Menu Styles */
+    header {
+      position: relative;
+      background-color: #0b0c17
+      padding: 1em;
+      text-align: left;
+    }
+
+    .hamburger {
+      font-size: 2em;
+      cursor: pointer;
+      color: #74c0fc
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.2em;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Desktop: show menu always and hide the hamburger */
+    @media(min-width: 768px) {
+      .hamburger {
+        display: none;
+      }
+      nav ul {
+        display: flex;
+        gap: 2em;
+      }
+      nav ul li {
+        margin: 0;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-menu" class="hidden">
+      <ul>
+        <li><a href=index.html>Home</a></li>
+        <li><a href=worlds.html>Worlds</a></li>
+        <li><a href=characters.html>Characters</a></li>
+        <li><a href=lore.html>Lore</a></li>
+        <li><a href=timeline.html>Timeline</a></li>
+        <li><a href=episodes.html>Episodes</a></li>
+        <li><a href=social.html>Social</a></li>
+        <li><a href=wall.html>Wall</a></li>
+      </ul>
+    </nav>
+  </header>
+  
   <h1>Welcome to the Zephyr Archive</h1>
   <p>Your journey with the southern winds awaits.</p>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-placeholder').innerHTML = data;
+    }
+  </script>
 </body>
 </html>
