@@ -33,6 +33,10 @@
       text-align: left;
     }
 
+    .hidden {
+      display: none;
+    }
+
     .hamburger {
       font-size: 2em;
       cursor: pointer;
@@ -67,6 +71,11 @@
       nav ul li {
         margin: 0;
       }
+
+      nav ul li {
+        color: #ffcc00;
+        font-weight: bold;
+      }
     }
   </style>
 </head>
@@ -82,6 +91,7 @@
         <li><a href=lore.html>Lore</a></li>
         <li><a href=timeline.html>Timeline</a></li>
         <li><a href=episodes.html>Episodes</a></li>
+        <li><a href=notifications.html>Notifications</a></li>
         <li><a href=social.html>Social</a></li>
         <li><a href=wall.html>Wall</a></li>
       </ul>
@@ -94,6 +104,11 @@
     function toggleMenu() {
       const menu = document.getElementById('nav-placeholder').innerHTML = data;
       menu.classlist.toggle('hidden');
+    }
+  </script>
+  <script>
+    function openNotifications() {
+      alert("No new notifications yet, check back later~");
     }
   </script>
 </body>
