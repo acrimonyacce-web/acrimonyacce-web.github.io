@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zephyr Archive</title>
   <style>
+    /* Reset */
     body {
       margin: 0;
       padding: 0;
       background-color: #0b0c17;
       color: #ffffff;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       text-align: center;
     }
 
@@ -25,16 +26,12 @@
       color: #c3c3c3;
     }
 
-    /* Hamburger Menu Styles */
+    /* Header and Hamburger */
     header {
       position: relative;
       background-color: #0b0c17;
       padding: 1em;
       text-align: left;
-    }
-
-    .hidden {
-      display: none;
     }
 
     .hamburger {
@@ -48,7 +45,11 @@
       padding: 0;
       margin: 0;
     }
-    
+
+    nav ul li {
+      margin: 1em 0;
+    }
+
     nav ul li a {
       text-decoration: none;
       color: #ffffff;
@@ -59,10 +60,13 @@
       display: none;
     }
 
-    /* Desktop: show menu always and hide the hamburger */
-    @media(min-width: 768px) {
+    /* Desktop: show menu always, hide hamburger */
+    @media (min-width: 768px) {
       .hamburger {
         display: none;
+      }
+      nav {
+        display: block !important;
       }
       nav ul {
         display: flex;
@@ -70,11 +74,6 @@
       }
       nav ul li {
         margin: 0;
-      }
-
-      nav ul li {
-        color: #ffcc00;
-        font-weight: bold;
       }
     }
   </style>
@@ -91,22 +90,22 @@
         <li><a href="lore.html">Lore</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="episodes.html">Episodes</a></li>
-        <li><a href="notifications".html>Notifications</a></li>
+        <li><a href="#" onclick="openNotifications()">Notifications</a></li>
         <li><a href="social.html">Social</a></li>
         <li><a href="wall.html">Wall</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <h1>Welcome to the Zephyr Archive</h1>
   <p>Your journey with the southern winds awaits.</p>
+
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('nav-menu').innerHTML = data;
-      menu.classlist.toggle('hidden');
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
     }
-  </script>
-  <script>
+
     function openNotifications() {
       alert("No new notifications yet, check back later~");
     }
