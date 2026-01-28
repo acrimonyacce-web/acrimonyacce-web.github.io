@@ -26,18 +26,22 @@
       color: #c3c3c3;
     }
 
-    /* Header and Hamburger */
+    /* Header & Navigation */
     header {
       position: relative;
       background-color: #0b0c17;
       padding: 1em;
-      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
+    /* Hamburger button */
     .hamburger {
       font-size: 2em;
       cursor: pointer;
       color: #74c0fc;
+      display: block; /* shown on mobile by default */
     }
 
     nav ul {
@@ -47,7 +51,7 @@
     }
 
     nav ul li {
-      margin: 1em 0;
+      margin: 0.5em 0;
     }
 
     nav ul li a {
@@ -56,14 +60,21 @@
       font-size: 1.2em;
     }
 
+    /* Hidden class for toggle */
     .hidden {
       display: none;
     }
 
-    /* Desktop: show menu always, hide hamburger */
+    /* Notifications button styling */
+    nav ul li a.notifications {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    /* Desktop layout */
     @media (min-width: 768px) {
       .hamburger {
-        display: none;
+        display: none; /* hide hamburger on desktop */
       }
       nav {
         display: block !important;
@@ -71,6 +82,8 @@
       nav ul {
         display: flex;
         gap: 2em;
+        align-items: center;
+        margin: 0;
       }
       nav ul li {
         margin: 0;
@@ -90,7 +103,7 @@
         <li><a href="lore.html">Lore</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="episodes.html">Episodes</a></li>
-        <li><a href="#" onclick="openNotifications()">Notifications</a></li>
+        <li><a href="#" class="notifications" onclick="openNotifications()">Notifications</a></li>
         <li><a href="social.html">Social</a></li>
         <li><a href="wall.html">Wall</a></li>
       </ul>
