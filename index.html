@@ -65,12 +65,6 @@
       display: none;
     }
 
-    /* Notifications button styling */
-    nav ul li a.notifications {
-      color: #ffcc00;
-      font-weight: bold;
-    }
-
     /* Desktop layout */
     @media (min-width: 768px) {
       .hamburger {
@@ -103,9 +97,6 @@
         <li><a href="lore.html">Lore</a></li>
         <li><a href="timeline.html">Timeline</a></li>
         <li><a href="episodes.html">Episodes</a></li>
-        <li><a href="#" class="notifications" onclick="openNotifications()">Notifications</a></li>
-        <li><a href="social.html">Social</a></li>
-        <li><a href="wall.html">Wall</a></li>
       </ul>
     </nav>
   </header>
@@ -117,10 +108,6 @@
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
       menu.classList.toggle('hidden');
-    }
-
-    function openNotifications() {
-      alert("No new notifications yet, check back later~");
     }
   </script>
 </body>
